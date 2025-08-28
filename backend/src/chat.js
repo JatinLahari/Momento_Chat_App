@@ -14,7 +14,7 @@ dotenv.config({ path: path.join(__dirname, "../.env") });
 chat.use(express.json());
 chat.use(cookieParser());
 chat.use(cors({
-    origin: "http://localhost:5173",
+    origin: process.env.CLIENT_URL  || "http://localhost:5173",
     credentials: true
 }));
 
