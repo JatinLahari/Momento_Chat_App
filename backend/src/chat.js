@@ -8,9 +8,9 @@ import cors from "cors";
 import{chat, server} from "./lib/socket.js";
 
 import path from "path";
-dotenv.config();
 const __dirname = path.resolve();
 
+dotenv.config({ path: path.join(__dirname, "../.env") });
 chat.use(express.json());
 chat.use(cookieParser());
 chat.use(cors({

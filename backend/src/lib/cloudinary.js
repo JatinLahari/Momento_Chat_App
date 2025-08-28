@@ -1,6 +1,8 @@
 import {v2 as cloudinary} from "cloudinary";
 import dotenv from "dotenv";
-dotenv.config();
+import path from "path";
+const __dirname = path.resolve();
+dotenv.config({ path: path.join(__dirname, "../.env") });
 cloudinary.config(
   {
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,

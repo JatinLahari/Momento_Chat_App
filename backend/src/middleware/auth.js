@@ -1,7 +1,9 @@
 import  jwt  from "jsonwebtoken";
 import dotenv from "dotenv";
 import User from "../models/user.model.js";
-dotenv.config();
+import path from "path";
+const __dirname = path.resolve();
+dotenv.config({ path: path.join(__dirname, "../.env") });
 export const auth = async(req, res, next)=>{
     let {token} = req.cookies;
     try{
