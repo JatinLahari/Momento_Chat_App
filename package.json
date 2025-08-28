@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JatinLahari/Momento-A_Real_Time_Chat_Application.git"
+    "url": "git+https://github.com/JatinLahari/Momento_Chat_App.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JatinLahari/Momento-A_Real_Time_Chat_Application/issues"
+    "url": "https://github.com/JatinLahari/Momento_Chat_App/issues"
   },
-  "homepage": "https://github.com/JatinLahari/Momento-A_Real_Time_Chat_Application#readme",
+  "homepage": "https://github.com/JatinLahari/Momento_Chat_App#readme",
   "description": ""
 }
