@@ -24,13 +24,13 @@ chat.use("/message", messageRouter);
 if(process.env.NODE_ENV==='production'){
     // chat.use(express.static(path.join(__dirname, "../../frontend/dist")));
     const pa = path.join(__dirname, "../../frontend/dist");
-
+    console.log("consoling the path------>", pa)
     chat.use(express.static(pa));
 
-    chat.get("/", (req, res)=>{
-        // console.log("Serving index.html: ",req.url);
+    chat.get(/^\/(?!api).*/, (req, res)=>{
+        console.log("Serving index.html: ",req.url);
         res.sendFile(path.join(pa, "index.html"));
-    })
+    });
 }
 
 server.listen(process.env.PORT,()=>{
