@@ -22,10 +22,14 @@ chat.use("/user", userRouter);
 chat.use("/message", messageRouter);
 
 if(process.env.NODE_ENV==='production'){
-    chat.use(express.static(path.join(__dirname, "../../frontend/dist")));
+    // chat.use(express.static(path.join(__dirname, "../../frontend/dist")));
+    const pa = path.join(__dirname, "../../frontend/dist");
 
-    chat.get("/*", (req, res)=>{
-        res.sendFile(path.join(__dirname, "../../frontend", "dist", "index.html"));
+    chat.use(express.static(pa));
+
+    chat.get("/", (req, res)=>{
+        // console.log("Serving index.html: ",req.url);
+        res.sendFile(path.join(pa, "index.html"));
     })
 }
 
